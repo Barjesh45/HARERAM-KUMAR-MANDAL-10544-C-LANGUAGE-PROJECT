@@ -1,0 +1,78 @@
+# What is a digital root?
+    Digital root is the single-digit value obtained by repeatedly adding the digits in a given number together. You need to start by adding all the digits of a given number. You'll then need 
+    to repeat this operation on the number you obtain, and so on until you end up with a single digit.For example, say we need to calculate the digital root of 56984.
+
+    Step 1: 5 + 6 + 9 + 8 + 4 = 32
+    Step 2: 3 + 2 = 5
+
+    5 is the digital root of the number 56984.
+
+    Now that you know what is a digital root, let's see a few of its distinct features.
+
+    This tool is different than the other root calculations, such as the square root, cube root, or the root mean square, as the result only be {1,2,3,4,5,6,7,8,9}, while the other roots
+    mentioned can take any value from the number line
+
+# How does this digital root calculator work?
+    This calculator uses the ceil function to eliminate the need to calculate the sum by adding the digits repeatedly. The ceil function enables us to find the digital root using a 
+    single equation:
+
+    digital root = n - 9 × (ceil(n / 9) − 1)
+    where n is the number in question.
+    Let us break this equation down,
+
+    'n/9' gives the quotient that we get when the number is divided by 9. Here we might get an integer as well as a decimal digit.
+    Next, we take 'ceil' -ceiling - of 'n/9'. This will get rid of the decimal component.
+    Now, when we multiply this number by 9, we will get a number that is the multiple of 9 that is the closest to our given number.
+    At last, the difference between the two numbers gives us the digital root.
+# What are some applications of digital root?
+    Let's start with the most interesting application of digital root:
+
+  1. The magic trick!
+
+    First, you need a friend who is as equally nerdy as you. Ask them to mentally choose a number from 1-10. Now ask them to multiply it by 9 and find the sum of digits of the multiple.
+    Now, pretend to read their mind and tell them that they have got 9 as the answer. You can do this trick with much larger numbers as well, however, it might take a little longer for
+    your friend to calculate the digital root of large numbers without knowing the trick. Refer to Property 1 mentioned below for more clarification on this.Now, time for the revelation!
+    For example, your friend chose 5. On multiplying 5 by 9, they will get 45. 4 + 5 = 9, which shouldn't be too difficult to calculate. You can make the magic trick more and more 
+    complex by adding in additional drama, for example, asking your friend to shuffle the digits.
+
+  2. Digital roots can be used as a primitive way to check the accuracy of arithmetic operations like subtraction, multiplication, and addition.
+
+    Let's see how we can use digital root to check the correctness of a multiplication. To check if the multiplication is correct or not, calculate the digital root of the numbers on
+    both sides of the equation before performing the multiplication. Then multiply the digital roots and calculate the digital root of the product. The digital root at both sides of the
+    equation should be equal in order for the multiplication to be correct. Let's look at an example,456 × 376 = 398765.
+    Let's first look at the left-hand side of the equation and find the sum of digits on this side. The digital root of 456 is 6. The digital root of 376 is 7. On multiplying 6 and 7,
+    we get 42. The digital root of 42 is 6. Now, the digital root of the right-hand side comes out as 2. Since the digital roots obtained on both sides of the equals to sign are
+    different, this multiplication is incorrect.
+
+    In a similar manner, let's see how we can use digital root to check the correctness of a subtraction problem. For example, consider 340-172=168. The digital root of 340 is 7. The
+    digital root of 172 is 1. Subtracting these two we get 6. Now let's check the digital root of the right hand side. The digital root of 168 is 6, so this subtraction is correct.
+
+  3. Digital roots can also help detect rounding-off errors in the Fibonacci sequence.
+
+         When calculating the Fibonacci sequence for very large numbers, the computational programs might round off and hence lead to an error when generating the next number in the sequence.
+         The digital root of a Fibonacci sequence has a 24-digit cycle (1, 1, 2, 3, 5, 8, 4, 3, 7, 1, 8, 9, 8, 8, 7, 6, 4, 1, 5, 6, 2, 8, 1, 9), which means that the sequence of digital root
+          repeats every 24 numbers. If there is some change in the expected sequence of digital roots, it might be due to the rounding-off error. You can use our Fibonacci calculator to
+          generate a Fibonacci sequence easily!
+
+  4. We can also use the digital sum method for square root correctness.
+
+   
+Here, simply by looking at the digital root of a perfect square, we can guess if it's correct or not. The digital root of a perfect square will be one of the four digits 1, 4, 7, 9 only.
+Hence, if we find any other digit as the digital sum, the number is not a perfect square for sure.
+
+# Some properties of digital root
+    The following are some of the properties of digital roots.
+    When any number is multiplied by 9, the digital root will always be 9. For example:
+    8 × 9 = 72 and 7 + 2 = 9
+    45 × 9 = 405, 4 + 0 + 5 = 9
+    When 9 is added to a number, the digital root will remain unchanged. For example:
+    527 = 5 + 2+ 7 = 14, 1 + 4 = 5
+    Now, if we add 9 to 527 we get:
+    5 + 2 + 7 + 9 = 23, 2 + 3 = 5
+    Hence, adding 9 to a number does not change the digital root of the original number. Alternatively, we can omit 9 while calculating the digital root of a number.
+    We can also use the digital sum method for square root correctness as demonstrated above. If we take a digital root of a perfect square it will be one of the four digits 1, 4, 7, 9
+    only. For example:
+    25 => 2 + 5 = 7
+    36 => 3 + 6 = 9
+    49 => 4 + 9 = 13, 1 + 3 = 4
+    100 => 1 + 0 + 0 = 1
