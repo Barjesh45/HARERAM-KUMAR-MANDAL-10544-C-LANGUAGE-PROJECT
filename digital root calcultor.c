@@ -1,8 +1,5 @@
 #include <stdio.h>
-
-//function definination
 int digirootcal(int n);
-//function calling
 int digirootcal(int n){
     int sum;
     for(;n>=10;n=sum){
@@ -14,7 +11,7 @@ int digirootcal(int n){
     }
     return n;
 }
-//main program which execute the code
+
 int main (){
     int n;
     printf("enter the number:");
